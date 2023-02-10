@@ -11,12 +11,11 @@ library(PMCMRplus)
 
 #Files
 BD <- read.spss("TPC_3_Caracterizacao_Concelhos_Saude.sav", to.data.frame = TRUE)
-
 #########Exercise 1
 # Compare region Norte and Lisbon according to number of doctors
 # So what we have here is a quantitative variable (number of doctors) and a categorical variable (NUTS), meaning I want a t-test for independent samples
 NL_BD <- BD %>% 
-  subset(NUTS_II %in% c("Norte", "Área Metropolitana de Lisboa"))
+  subset(NUTS_II == "Norte" | NUTS_II == "Área Metropolitana de Lisboa")
 
 #Produce boxplots and visually check for outliers
 ggplot(NL_BD, aes(x = NUTS_II, y = Médicos, fill = NUTS_II)) +
