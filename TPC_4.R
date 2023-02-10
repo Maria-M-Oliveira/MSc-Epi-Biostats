@@ -1,6 +1,4 @@
 # Libraries
-library(tidyverse)
-library(ggplot2)
 library(foreign)
 library(DescTools)
 
