@@ -1,0 +1,43 @@
+---
+title: "Homework 4 - Report"
+output: html_document
+date: "2023-02-10"
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+library(foreign)
+library(DescTools)
+
+
+```
+
+```{r include=FALSE}
+BD <- read.spss("BaseCovid_trabalho4.sav", to.data.frame = TRUE)
+```
+
+#### A group of researchers wants to know how to characterize the world countries with more cases and deaths by COVID-19, per million inhabitants. To analyze the data inherent to this study, consider the SPSS database BaseCovid_trabalho4.sav.
+The research team decided to analyze the association between countries' median age being above or below 30 years and their total number of COVID-19 cases per million population.
+
+##### Do these data suggest that there is a relationship between the median age of countries and their number of cases of COVID-19 per million population?
+
+Let's make a crosstab of our data:
+```{r echo=FALSE}
+cross_age_cases <- xtabs(~BD$total_cases_per_million_10_tercil+BD$median_age_2cat)
+cross_age_cases
+```
+
+To check for a relationship between the median age of countries and their number of cases of COVID-19 per million population we want to perform a chi-square test. 
+To do that, we must first test the assumptions:
+```{r echo=FALSE}
+expected <- ExpFreq(cross_age_cases)
+```
+
+We can verify that all expected values are >5, so we can proceed with our chi-square test of independence.
+```{r echo=FALSE}
+qui <- chisq.test(BD$total_cases_per_million_10_tercil, BD$median_age_2cat)
+qui
+```
+With a p-value of 3.299e-07, we reject the null hypothesis that these variables are independent and, as such, there is a statistically significant relationship between them.
+
