@@ -1,6 +1,6 @@
 ---
 title: "Homework 3 - Report"
-output: html_document
+output: word_document
 date: "2023-02-10"
 ---
 
