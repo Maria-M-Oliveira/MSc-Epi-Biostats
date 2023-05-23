@@ -2,6 +2,7 @@
 library(tidyverse)
 library(foreign)
 library(factoextra)
+library(cluster)
 
 ### Files
 BD <- read.spss("BaseCovid.sav", to.data.frame = TRUE)
@@ -24,8 +25,25 @@ df <- BD %>%
 
 # 1st Calculate the pairwise dissimilarity/correlation between each observation
 dist.cor <- get_dist(df, method = "pearson") #proximity measure: Pearson correlation bc continuous variable
+fviz_dist(dist.cor)
+
 clust <- hclust(dist.cor, method = "single")
 plot(clust)
+
+gap_stat <- clusGap(df, FUN = hcut, nstart = 25, K.max = 10, B = 50)
+fviz_gap_stat(gap_stat)
+
+
+#cut the dendrogram into 5 clusters
+fit <- cutree(clust, k = 5 )
+fit
+
+#find number of observations in each cluster
+table(fit)
+
+rect.hclust(clust, k = 5, border = "green")
+
+
 
 # 2nd Fuse observations into clusters
 
