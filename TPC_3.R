@@ -1,6 +1,5 @@
 # Libraries
 library(tidyverse)
-library(ggplot2)
 library(foreign)
 library(qqplotr)
 library(car)
