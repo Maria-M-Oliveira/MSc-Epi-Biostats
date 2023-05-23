@@ -5,7 +5,7 @@ library(factoextra)
 library(cluster)
 
 ### Files
-BD <- read.spss("BaseCovid.sav", to.data.frame = TRUE)
+BD <- read.spss("./MSc-Epi-Biostats/BaseCovid.sav", to.data.frame = TRUE)
 
 #subsetting bc i only want a few variables and standardizing
 df <- BD %>% 
@@ -27,24 +27,27 @@ df <- BD %>%
 dist.cor <- get_dist(df, method = "pearson") #proximity measure: Pearson correlation bc continuous variable
 fviz_dist(dist.cor)
 
-clust <- hclust(dist.cor, method = "single")
+# 2nd Set your aggregation criteria and start clustering
+clust <- hclust(dist.cor, method = "single") #single linkage in this case
 plot(clust)
 
 gap_stat <- clusGap(df, FUN = hcut, nstart = 25, K.max = 10, B = 50)
 fviz_gap_stat(gap_stat)
 
-
-#cut the dendrogram into 5 clusters
+#cut the dendrogram into x clusters
 fit <- cutree(clust, k = 5 )
 fit
 
 #find number of observations in each cluster
 table(fit)
 
+# Add cluster rectangles to dendogram
 rect.hclust(clust, k = 5, border = "green")
 
+# .2 Non-hierarchical clustering,, aka k-means
+# For kmean clustering we must first have a predetermined number of clusters, determined before in the hierarchical clustering
 
 
-# 2nd Fuse observations into clusters
+
 
 
