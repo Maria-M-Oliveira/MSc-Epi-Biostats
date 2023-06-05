@@ -6,7 +6,7 @@ library(ranger)
 library(ggfortify)
 
 ### Data ####
-df <- read.spss("./MSc-Epi-Biostats/Breast_cancer_survival.sav", to.data.frame = TRUE) %>% 
+df <- read.spss("./Breast_cancer_survival.sav", to.data.frame = TRUE) %>% 
   mutate(status = recode(status, `Censored` = 0, `Died` = 1))
 # Variable status: "Died" or "Censored"
 # Variable time: survival time in months
@@ -15,7 +15,7 @@ df <- read.spss("./MSc-Epi-Biostats/Breast_cancer_survival.sav", to.data.frame =
 
 km <- with(df, Surv(time, status))
 head(km,80)
-#  “+” after the time in the print out of km indicates censoring
+#  + after the time in the print out of km indicates censoring
 
 # Kaplan-Meier analysis
 km_fit <- survfit(Surv(time, status) ~ 1, data=df)
