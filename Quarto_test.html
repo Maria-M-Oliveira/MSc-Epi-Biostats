@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Testes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="Quarto_test_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Quarto_test_files/libs/quarto-html/quarto.js"></script>
+<script src="Quarto_test_files/libs/quarto-html/popper.min.js"></script>
+<script src="Quarto_test_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Quarto_test_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Quarto_test_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Quarto_test_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Quarto_test_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Quarto_test_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Quarto_test_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Testes</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p><strong>We intend to compare the North and Lisbon regions regarding the number of physicians. Please indicate, justifying, what inferential statistical methodologies would be appropriate for this purpose? Name the hypothesis tests used, comment on and interpret the results. </strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Quarto_test_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 3%">
+<col style="width: 6%">
+<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 4%">
+<col style="width: 5%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">NUTS_II</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">mean</th>
+<th style="text-align: right;">sd</th>
+<th style="text-align: right;">stderr</th>
+<th style="text-align: right;">LCL</th>
+<th style="text-align: right;">UCL</th>
+<th style="text-align: right;">median</th>
+<th style="text-align: right;">min</th>
+<th style="text-align: right;">max</th>
+<th style="text-align: right;">IQR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Norte</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">198.2</td>
+<td style="text-align: right;">566.78</td>
+<td style="text-align: right;">61.12</td>
+<td style="text-align: right;">76.68</td>
+<td style="text-align: right;">319.72</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4650</td>
+<td style="text-align: right;">123.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Área Metropolitana de Lisboa</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">988.0</td>
+<td style="text-align: right;">2112.63</td>
+<td style="text-align: right;">497.95</td>
+<td style="text-align: right;">-62.58</td>
+<td style="text-align: right;">2038.58</td>
+<td style="text-align: right;">391</td>
+<td style="text-align: right;">52</td>
+<td style="text-align: right;">9240</td>
+<td style="text-align: right;">552.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<p><img src="Quarto_test_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>First, we need to test for assumptions: Normal distribuition in each group, and homogeneity of variances</p>
+<p>Starting with Shapiro-Wilk to test for normality:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>NL_BD <span class="sc">%&gt;%</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(NUTS_II) <span class="sc">%&gt;%</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="st">`</span><span class="at">W Statistic</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">shapiro.test</span>(Médicos)<span class="sc">$</span>statistic,<span class="dv">2</span>),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">p-value</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">shapiro.test</span>(Médicos)<span class="sc">$</span>p.value)  <span class="sc">%&gt;%</span> </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>(<span class="at">format =</span> <span class="st">"markdown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">NUTS_II</th>
+<th style="text-align: right;">W Statistic</th>
+<th style="text-align: right;">p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Norte</td>
+<td style="text-align: right;">0.34</td>
+<td style="text-align: right;">0e+00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Área Metropolitana de Lisboa</td>
+<td style="text-align: right;">0.43</td>
+<td style="text-align: right;">2e-07</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Both p-values are &lt;0.05, meaning we reject the null hypothesis, so this data is not normally distributed We then need to do a non-parametric test: Mann-Whitney U</p>
+<p>Before that, and for the sake of practice, lets test for homogeneity of variances</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>lev1<span class="ot">&lt;-</span><span class="fu">leveneTest</span>(Médicos <span class="sc">~</span> NUTS_II, <span class="at">data=</span>NL_BD)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(lev1) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Levene's Test for Homogeneity of Variance (center = median)
+       Df F value  Pr(&gt;F)  
+group   1    6.42 0.01281 *
+      102                  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>we get a p-value of 0.01281, meaning we reject the null hypothesis, so between group variances are unequal</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># moving on to the Mann whitney U test</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>mann_whitney <span class="ot">&lt;-</span> <span class="fu">wilcox.test</span>(Médicos <span class="sc">~</span> NUTS_II, <span class="at">data=</span>NL_BD, <span class="at">na.rm=</span><span class="cn">TRUE</span>, <span class="at">paired=</span><span class="cn">FALSE</span>, <span class="at">exact=</span><span class="cn">FALSE</span>, <span class="at">conf.int=</span><span class="cn">TRUE</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>mann_whitney</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Wilcoxon rank sum test with continuity correction
+
+data:  Médicos by NUTS_II
+W = 233, p-value = 3.405e-06
+alternative hypothesis: true location shift is not equal to 0
+95 percent confidence interval:
+ -507.0001 -131.9999
+sample estimates:
+difference in location 
+             -229.0001 </code></pre>
+</div>
+</div>
+<p>We get a p-value of 3.405e-06, meaning we reject the null hypothesis that distributions are equal and conclude that there is a significant difference in the number of doctors of both regions.</p>
+<p><strong>A researcher argues that there are statistically significant differences between the average values per county for the number of physicians and the number of nurses in Portugal. Do you agree with the researcher’s statement? Identify the appropriate statistical methodologies to apply, comment and interpret the results.</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>BD <span class="ot">&lt;-</span> BD <span class="sc">%&gt;%</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">diff =</span> Médicos <span class="sc">-</span> Enfermeiros)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-med" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;1: Médicos</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">mean</th>
+<th style="text-align: right;">sd</th>
+<th style="text-align: right;">stderr</th>
+<th style="text-align: right;">LCL</th>
+<th style="text-align: right;">UCL</th>
+<th style="text-align: right;">median</th>
+<th style="text-align: right;">min</th>
+<th style="text-align: right;">max</th>
+<th style="text-align: right;">IQR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">308</td>
+<td style="text-align: right;">163.11</td>
+<td style="text-align: right;">667.68</td>
+<td style="text-align: right;">38.04</td>
+<td style="text-align: right;">88.26</td>
+<td style="text-align: right;">237.96</td>
+<td style="text-align: right;">24.5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">9240</td>
+<td style="text-align: right;">79</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-enf" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;2: Enfermeiros</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">mean</th>
+<th style="text-align: right;">sd</th>
+<th style="text-align: right;">stderr</th>
+<th style="text-align: right;">LCL</th>
+<th style="text-align: right;">UCL</th>
+<th style="text-align: right;">median</th>
+<th style="text-align: right;">min</th>
+<th style="text-align: right;">max</th>
+<th style="text-align: right;">IQR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">308</td>
+<td style="text-align: right;">225.6</td>
+<td style="text-align: right;">694.28</td>
+<td style="text-align: right;">39.56</td>
+<td style="text-align: right;">147.76</td>
+<td style="text-align: right;">303.44</td>
+<td style="text-align: right;">48.5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">9507</td>
+<td style="text-align: right;">121</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell-output-display">
+<p><img src="Quarto_test_files/figure-html/tbl-enf-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="Quarto_test_files/figure-html/tbl-enf-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  BD$diff
+W = 0.64009, p-value &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>With a p-value of &lt;2.2e-16, we reject the null hypothesis and conclude that the difference between groups is not normally distributed.</p>
+<p>Since we rejected normality, we must perform a non parametric test: Wilcoxon test</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>wilcox <span class="ot">&lt;-</span> <span class="fu">wilcox.test</span>(BD<span class="sc">$</span>Médicos, BD<span class="sc">$</span>Enfermeiros,<span class="at">na.rm=</span><span class="cn">TRUE</span>, <span class="at">paired=</span><span class="cn">TRUE</span>, <span class="at">exact=</span><span class="cn">FALSE</span>, <span class="at">conf.int=</span><span class="cn">TRUE</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>wilcox <span class="co">#p-value &lt;2.2e-16, we reject the null hypothesis</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Wilcoxon signed rank test with continuity correction
+
+data:  BD$Médicos and BD$Enfermeiros
+V = 3513.5, p-value &lt; 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+95 percent confidence interval:
+ -36.49999 -23.00001
+sample estimates:
+(pseudo)median 
+      -28.0001 </code></pre>
+</div>
+</div>
+<p>With a p-value of &lt;2.2e-16, we reject the null hypothesis and conclude that there is a statistically significant difference between the number of physicians and the number of nurses.</p>
+<p><strong>You want to compare all regions regarding the number of physicians. Please indicate, justifying, which inferential statistical methodologies would be appropriate for this purpose? Name the hypothesis tests used, comment and interpret the results.</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Quarto_test_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 4%">
+<col style="width: 7%">
+<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 4%">
+<col style="width: 5%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">NUTS_II</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">mean</th>
+<th style="text-align: right;">sd</th>
+<th style="text-align: right;">stderr</th>
+<th style="text-align: right;">LCL</th>
+<th style="text-align: right;">UCL</th>
+<th style="text-align: right;">median</th>
+<th style="text-align: right;">min</th>
+<th style="text-align: right;">max</th>
+<th style="text-align: right;">IQR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Ilhas</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">57.93</td>
+<td style="text-align: right;">145.38</td>
+<td style="text-align: right;">26.54</td>
+<td style="text-align: right;">3.65</td>
+<td style="text-align: right;">112.21</td>
+<td style="text-align: right;">9.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">719</td>
+<td style="text-align: right;">35.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Norte</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">198.20</td>
+<td style="text-align: right;">566.78</td>
+<td style="text-align: right;">61.12</td>
+<td style="text-align: right;">76.68</td>
+<td style="text-align: right;">319.72</td>
+<td style="text-align: right;">36.0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4650</td>
+<td style="text-align: right;">123.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Centro</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">99.75</td>
+<td style="text-align: right;">429.94</td>
+<td style="text-align: right;">42.99</td>
+<td style="text-align: right;">14.45</td>
+<td style="text-align: right;">185.05</td>
+<td style="text-align: right;">21.5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4239</td>
+<td style="text-align: right;">46.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Área Metropolitana de Lisboa</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">988.00</td>
+<td style="text-align: right;">2112.63</td>
+<td style="text-align: right;">497.95</td>
+<td style="text-align: right;">-62.58</td>
+<td style="text-align: right;">2038.58</td>
+<td style="text-align: right;">391.0</td>
+<td style="text-align: right;">52</td>
+<td style="text-align: right;">9240</td>
+<td style="text-align: right;">552.50</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Alentejo</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">34.67</td>
+<td style="text-align: right;">73.08</td>
+<td style="text-align: right;">9.60</td>
+<td style="text-align: right;">15.45</td>
+<td style="text-align: right;">53.89</td>
+<td style="text-align: right;">11.0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">436</td>
+<td style="text-align: right;">20.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Algarve</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">105.38</td>
+<td style="text-align: right;">155.87</td>
+<td style="text-align: right;">38.97</td>
+<td style="text-align: right;">22.32</td>
+<td style="text-align: right;">188.44</td>
+<td style="text-align: right;">56.0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">82.50</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Quarto_test_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+<p>Since we want to compare multiple groups, we want to perform an ANOVA test or Kruskall-Wallis First, we need to test for assumptions: Normal distribuition in each group; Homogeneity of variances</p>
+<p>Starting with Shapiro-Wilk to test for normality</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Med_BD <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(NUTS_II) <span class="sc">%&gt;%</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="st">`</span><span class="at">W Statistic</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">shapiro.test</span>(Médicos)<span class="sc">$</span>statistic,<span class="dv">2</span>),</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">p-value</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">shapiro.test</span>(Médicos)<span class="sc">$</span>p.value)  <span class="sc">%&gt;%</span> </span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>(<span class="at">format =</span> <span class="st">"markdown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">NUTS_II</th>
+<th style="text-align: right;">W Statistic</th>
+<th style="text-align: right;">p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Ilhas</td>
+<td style="text-align: right;">0.42</td>
+<td style="text-align: right;">0.00e+00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Norte</td>
+<td style="text-align: right;">0.34</td>
+<td style="text-align: right;">0.00e+00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Centro</td>
+<td style="text-align: right;">0.18</td>
+<td style="text-align: right;">0.00e+00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Área Metropolitana de Lisboa</td>
+<td style="text-align: right;">0.43</td>
+<td style="text-align: right;">2.00e-07</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Alentejo</td>
+<td style="text-align: right;">0.44</td>
+<td style="text-align: right;">0.00e+00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Algarve</td>
+<td style="text-align: right;">0.65</td>
+<td style="text-align: right;">4.75e-05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>All of them present a p-value &lt;0.05,we reject the null hypothesis, and conclude that this data is not normally distributed. We then need to do a non-parametric test: Kruskal-Wallis, but before that, and for the sake of practice, lets test for homogeneity of variances</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>lev2<span class="ot">&lt;-</span><span class="fu">leveneTest</span>(Médicos <span class="sc">~</span> NUTS_II, <span class="at">data=</span>Med_BD)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(lev2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Levene's Test for Homogeneity of Variance (center = median)
+       Df F value    Pr(&gt;F)    
+group   5  5.1171 0.0001606 ***
+      302                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>We get a p-value of 0.0001606, meaning we reject the null hypothesis, so between group variances are unequal.</p>
+<p>Let’s finally move onto the test we want:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>m1<span class="ot">&lt;-</span><span class="fu">kruskal.test</span>(Médicos <span class="sc">~</span> NUTS_II, <span class="at">data=</span>Med_BD)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(m1) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Kruskal-Wallis rank sum test
+
+data:  Médicos by NUTS_II
+Kruskal-Wallis chi-squared = 60.044, df = 5, p-value = 1.19e-11</code></pre>
+</div>
+</div>
+<p>With a p-value of 1.19e-11,we reject the null hypothesis, and conclude that there are differences in median values between groups</p>
+<p>We must then move onto post-hoc analysis:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Dunn's Kruskal-Wallis post-hoc test</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>posthocs1<span class="ot">&lt;-</span><span class="fu">dunnTest</span>(Médicos <span class="sc">~</span> NUTS_II, <span class="at">data=</span>Med_BD, <span class="at">method=</span><span class="st">"holm"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(posthocs1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Dunn (1964) Kruskal-Wallis multiple comparison</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>  p-values adjusted with the Holm method.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                Comparison          Z      P.unadj        P.adj
+1                       Alentejo - Algarve -2.7553672 5.862630e-03 4.690104e-02
+2  Alentejo - Área Metropolitana de Lisboa -6.7366767 1.620502e-11 2.430753e-10
+3   Algarve - Área Metropolitana de Lisboa -3.0255107 2.482136e-03 2.233923e-02
+4                        Alentejo - Centro -2.5284374 1.145715e-02 6.874291e-02
+5                         Algarve - Centro  1.3398184 1.803044e-01 5.409131e-01
+6    Área Metropolitana de Lisboa - Centro  5.4691014 4.523229e-08 5.880198e-07
+7                         Alentejo - Ilhas  0.1618548 8.714202e-01 8.714202e-01
+8                          Algarve - Ilhas  2.6309885 8.513692e-03 5.959584e-02
+9     Área Metropolitana de Lisboa - Ilhas  6.2185578 5.017452e-10 7.024433e-09
+10                          Centro - Ilhas  2.1795854 2.928821e-02 1.464410e-01
+11                        Alentejo - Norte -4.1954090 2.723796e-05 2.996176e-04
+12                         Algarve - Norte  0.2395993 8.106409e-01 1.000000e+00
+13    Área Metropolitana de Lisboa - Norte  4.2622906 2.023421e-05 2.428105e-04
+14                          Centro - Norte -2.0094802 4.448624e-02 1.779449e-01
+15                           Ilhas - Norte -3.5334718 4.101399e-04 4.101399e-03</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Dwass, Steel, Critchlow, Fligner post-hoc test</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>posthocs2<span class="ot">&lt;-</span><span class="fu">dscfAllPairsTest</span>(Médicos <span class="sc">~</span> NUTS_II, <span class="at">data=</span>Med_BD)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(posthocs2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+    Pairwise comparisons using Dwass-Steele-Critchlow-Fligner all-pairs test</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>data: Médicos by NUTS_II</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                             Ilhas   Norte   Centro 
+Norte                        0.00724 -       -      
+Centro                       0.18305 0.27392 -      
+Área Metropolitana de Lisboa 4.2e-06 4.9e-05 1.3e-07
+Alentejo                     0.99671 0.00032 0.05966
+Algarve                      0.12605 0.99993 0.68129
+                             Área Metropolitana de Lisboa Alentejo
+Norte                        -                            -       
+Centro                       -                            -       
+Área Metropolitana de Lisboa -                            -       
+Alentejo                     3.1e-08                      -       
+Algarve                      0.00285                      0.04508 </code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+P value adjustment method: single-step</code></pre>
+</div>
+</div>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
